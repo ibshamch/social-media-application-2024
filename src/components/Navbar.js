@@ -8,7 +8,7 @@ const Navbar = () => {
   const {
     onHandleLogin,
     onHandleLogOut,
-    showLogOut,
+    loginState,
     accountDetails,
     onHandleSignUp,
   } = useAccountDetailsContext();
@@ -26,7 +26,7 @@ const Navbar = () => {
     <div className="navbar">
       <h1>{accountDetails.email ? email : "Social Media Application"}</h1>
       <div className="btn-container">
-        {!showLogOut && (
+        {!loginState && (
           <>
             <Button modifierClass="login" onClick={onHandleLogin}>
               Login
@@ -36,7 +36,7 @@ const Navbar = () => {
             </Button>
           </>
         )}
-        {showLogOut && (
+        {loginState && (
           <Button modifierClass="logout" onClick={() => handleLogout(id)}>
             Logout
           </Button>

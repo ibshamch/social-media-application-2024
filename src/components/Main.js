@@ -5,7 +5,7 @@ import PostCreator from "./PostCreator";
 import PostList from "./PostList";
 import useAccountDetailsContext from "../hooks/useAccountDetailsContext";
 const Main = () => {
-  const { showLoginForm, showSignUpForm, loginState } =
+  const { showLoginForm, showSignUpForm, showLogOut, loginState } =
     useAccountDetailsContext();
   return (
     <div className="main">

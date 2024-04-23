@@ -7,7 +7,7 @@ import useAccountDetailsContext from "../hooks/useAccountDetailsContext";
 const Form = ({ type }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { onSetAccountDetails } = useAccountDetailsContext();
+  const { setAccountDetails, setLoginState } = useAccountDetailsContext();
   const handleEmail = (e) => setEmail(e.target.value);
   const handlePassword = (e) => setPassword(e.target.value);
 
@@ -27,7 +27,8 @@ const Form = ({ type }) => {
           loginState: true,
         }
       );
-      onSetAccountDetails(data);
+      setAccountDetails(data);
+      setLoginState(true);
     } else {
       console.log("Account not found");
     }
@@ -35,14 +36,25 @@ const Form = ({ type }) => {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
+
     const userDetails = { email, password, loginState: true, posts: [] };
+
     try {
-      const res = await axios.post(
-        "http://localhost:3001/accounts",
-        userDetails
-      );
-      console.log("Sign Up Successful", res.data);
-      onSetAccountDetails(res.data);
+      const res = await axios.get("http://localhost:3001/accounts");
+      const checkIfUserAlreadyExists = res.data.some((account) => {
+        return account.email === email;
+      });
+
+      if (checkIfUserAlreadyExists) {
+        console.error("Email Already Exists");
+      } else {
+        const { data } = await axios.post(
+          "http://localhost:3001/accounts",
+          userDetails
+        );
+        setAccountDetails(data);
+        setLoginState(true);
+      }
     } catch (error) {
       console.log("Error occurred during sign up:", error);
     }

@@ -1,57 +1,22 @@
 {
   "accounts": [
     {
-      "id": "91e0",
+      "id": "5513",
       "email": "ibsham",
       "password": "123",
-      "loginState": true,
-      "posts": [
-        {
-          "postedBy": "ibsham",
-          "post": "Hi how are you \n",
-          "postedDate": "Tue Apr 23 2024",
-          "postId": 1713891392121,
-          "comments": [
-            {
-              "commentText": "I am fine",
-              "id": 1713892041721,
-              "time": "22 : 7 : 21 "
-            },
-            {
-              "commentText": "I am fine too",
-              "id": 1713892049897,
-              "time": "22 : 7 : 29 "
-            }
-          ],
-          "likes": 4
-        },
-        {
-          "postedBy": "ibsham",
-          "post": "Hello",
-          "postedDate": "Tue Apr 23 2024",
-          "postId": 1713894126237,
-          "comments": [],
-          "likes": 0
-        },
-        {
-          "postedBy": "ibsham",
-          "post": "hi",
-          "postedDate": "Tue Apr 23 2024",
-          "postId": 1713894219274,
-          "comments": [
-            {
-              "commentText": "yo",
-              "id": 1713894227104,
-              "time": "22 : 43 : 47 "
-            }
-          ],
-          "likes": 5
-        }
-      ]
+      "loginState": false,
+      "posts": []
     },
     {
-      "id": "39a2",
-      "email": "aisham",
+      "id": "f860",
+      "email": "mehboob",
+      "password": "123",
+      "loginState": true,
+      "posts": []
+    },
+    {
+      "id": "6598",
+      "email": "mehboob1",
       "password": "123",
       "loginState": false,
       "posts": []

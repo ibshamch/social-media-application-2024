@@ -10,7 +10,7 @@ function Provider({ children }) {
   const [accountDetails, setAccountDetails] = useState({});
   const [loginState, setLoginState] = useState(false);
   const { id } = accountDetails;
-
+  console.log(accountDetails);
   const onHandlePostComment = async (commentData, postId) => {
     const { data } = await axios.get("http://localhost:3001/accounts");
     const findAcc = data.find((account) => account.id === id);
@@ -106,9 +106,9 @@ function Provider({ children }) {
   const onShowLogOut = () => setShowLogOut(true);
   const dataToShare = {
     setAccount,
-    handleLogOut,
-    handleSignUp,
-    handleLogin,
+    onHandleLogOut: handleLogOut,
+    onHandleSignUp: handleSignUp,
+    onHandleLogin: handleLogin,
     checkIfLoginExist,
     onHandleDelete,
     onHandleLikes,
@@ -120,6 +120,7 @@ function Provider({ children }) {
     accountDetails,
     showLoginForm,
     setShowLoginForm,
+    showSignUpForm,
     onShowLogOut,
     setAccountDetails,
   };
