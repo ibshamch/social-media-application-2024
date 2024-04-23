@@ -1,0 +1,86 @@
+.posts {
+  text-align: center;
+  flex-basis: 50%;
+  margin: 1em 1em 0 0;
+  padding: 1em;
+  max-width: 500px;
+}
+.post {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  flex-wrap: wrap;
+}
+
+.posted-by {
+  align-self: start;
+}
+.post-details {
+  font-size: 1.1rem;
+  text-align: center;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  margin-top: 0.5em;
+}
+
+.post-details::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+.post-details::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 5px; /* Border radius of the thumb */
+}
+
+.post-details::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color of the scrollbar track */
+}
+
+.posted-date {
+  font-size: 0.9rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+.action-btn {
+  padding: 0.5em 1em;
+}
+.like {
+  background-color: #f1eedc;
+}
+.comment {
+  background-color: #e5ddc5;
+}
+.edit {
+  background-color: #bed7dc;
+}
+.delete {
+  background-color: rgb(237, 92, 92);
+}
+
+.comments-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 0;
+
+  font-size: 0.8rem;
+}
+.comment-text {
+  align-self: center;
+  padding: 0;
+  font-size: 0.8rem;
+  margin: 0;
+  margin-bottom: 0.2em;
+}
+
+.post-comment {
+  align-self: end;
+  padding: 0.2em 0.5em;
+  font-size: 0.8rem;
+  background-color: rgb(194, 233, 136);
+}

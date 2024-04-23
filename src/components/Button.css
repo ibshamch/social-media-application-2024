@@ -1,0 +1,29 @@
+.btn {
+  margin-right: 1em;
+  padding: 1em 1.3em;
+  border-radius: 0.5em;
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.025rem;
+}
+.login {
+  background-color: #e5ddc5;
+}
+.login:hover {
+  background-color: #f1eedc;
+}
+
+.signup,
+.login-form-btn {
+  background-color: #b3c8cf;
+}
+.login-form-btn:hover,
+.signup:hover {
+  background-color: #bed7dc;
+}
+
+.logout {
+  background-color: rgb(233, 93, 93);
+}

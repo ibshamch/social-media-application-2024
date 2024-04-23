@@ -1,0 +1,36 @@
+.post-creator-input {
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 100px;
+  max-height: 100px;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  padding: 1em;
+  border-radius: 0.5em;
+  resize: none;
+}
+.post-creator-input::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+.post-creator-input::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 5px; /* Border radius of the thumb */
+}
+
+.post-creator-input::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color of the scrollbar track */
+}
+
+.post-creator-form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  max-width: 445px;
+}
+.post-creator-button {
+  align-self: end;
+  margin-top: 1em;
+  background-color: #b3c8cf;
+  padding: 0.5em 1em;
+}

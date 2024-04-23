@@ -1,0 +1,17 @@
+.login-to-view {
+  background-color: #b3c8cf;
+  color: #fff;
+  padding: 2em;
+  border-radius: 0.5em;
+  margin-top: 3em;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.feed {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
+}
